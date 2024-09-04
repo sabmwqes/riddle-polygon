@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    transition: all 0.33s;
 }
 
 :root{
@@ -37,8 +38,17 @@ h1::after{
 
 #polygon-container{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:300px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+#polygon-container img{
+    position: absolute;
 }
 
 #answer-container{
@@ -50,6 +60,10 @@ h1::after{
     margin-bottom: 50px;
 }
 
+#enter-text{
+    font-size: 20px;
+}
+
 #answer-input{
     width: 300px;
     height: 50px;
@@ -58,8 +72,20 @@ h1::after{
     border: 5px solid #cdd;
     border-radius: 3px;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     margin: 10px 0 10px 0;
+}
+
+@keyframes answer-wrong {
+    0% {
+        border: 5px solid #cdd;
+    }
+    10% {
+        border: 5px solid #f00;
+    }
+    100% {
+        border: 5px solid #cdd;
+    }
 }
 
 #answer-button{
@@ -85,6 +111,19 @@ h1::after{
 
 #there-is-a-hint{
     color: #999
+}
+
+#polygon-green{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#checkmark{
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.7;
+    transition: opacity 1s, scale 1s cubic-bezier(0.3, 1.0, 0.3, 1.2);
 }
 
 @keyframes BGgradient{
