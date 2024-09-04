@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://sabmwqes.github.io/riddle-polygon">
+    <meta property="og:image" content="img/polygon.svg">
+    <meta property="og:title" content='Riddle "Polygon"'>
+    <meta property="og:description" content="A riddle about polygon">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary-large-image">
     <title>Riddle</title>
+    <link rel="icon" type="image/png" href="img/polygon.svg">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
     <script src="script.js"></script>
 </head>
 <body>
     <a id="top"></a>
     <main>
-        <h1>Small Riddle "Polygon"</h1>
+        <h1>Riddle "Polygon"</h1>
         <a
         href="http://twitter.com/share?url=https://sabmwqes.github.io/riddle-polygon&text=Polygon Riddle"
         class="twitter-share-button"
@@ -20,14 +26,19 @@
         ></a>
         <div id="polygon-container">
             <img id="polygon" src="img/polygon.svg" alt="Polygon">
+            <p class="first">15</p>
+            <p class="second">p</p>
+            <p class="third" style="top: 38px; left: 207px;">e</p>
+            <p class="third" style="top: 199px; left: 58px;">e</p>
             <img id="polygon-green" src="img/polygon-green.svg" alt="Polygon-green">
             <img id="checkmark" src="img/checkmark.svg" width="180px" height="180px" alt="checkmark">
         </div>
         <div id="answer-container">
             <p id="enter-text">Enter answer here</p>
             <input type="text" id="answer-input" autocomplete="off">
+            <div id="underline"></div>
             <button id="answer-button">Answer</button>
-            <p id="there-is-a-hint">(Enter "hint" for a hint)</p>
+            <p id="there-is-a-hint">(Enter "hint" for hints)</p>
         </div>
     </main>
     <footer>

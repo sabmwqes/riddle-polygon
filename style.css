@@ -43,12 +43,54 @@ h1::after{
     justify-content: center;
     align-items: center;
     height:300px;
+    width: 300px;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #polygon-container img{
     position: absolute;
+}
+
+#polygon-container .first{
+    visibility: hidden;
+    opacity: 0.0;
+    display: inline-block;
+    font-size: 80px;
+    position: absolute;
+}
+
+#polygon-container .second{
+    visibility: hidden;
+    opacity: 0.0;
+    display: inline-block;
+    font-size: 30px;
+    position: absolute;
+    top: 18px;
+    left: 166px;
+}
+
+#polygon-container .third{
+    visibility: hidden;
+    opacity: 0.0;
+    display: inline-block;
+    font-size: 30px;
+    position: absolute;
+}
+
+#polygon-green{
+    visibility: hidden;
+    opacity: 0.0;
+    transition: all 1s;
+}
+
+#checkmark{
+    visibility: hidden;
+    opacity: 0.0;
+    scale: 0.7;
+    transition: opacity 1s, scale 1s cubic-bezier(0.3, 1.0, 0.3, 1.2);
 }
 
 #answer-container{
@@ -66,14 +108,14 @@ h1::after{
 
 #answer-input{
     width: 300px;
-    height: 50px;
+    height: 60px;
     background-color: #000;
     color: #e0ffff;
     border: 5px solid #cdd;
     border-radius: 3px;
     text-align: center;
     font-size: 30px;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 0 0;
 }
 
 @keyframes answer-wrong {
@@ -86,6 +128,21 @@ h1::after{
     100% {
         border: 5px solid #cdd;
     }
+}
+
+#underline{
+    width: 300px;
+    height: 5px;
+    background: linear-gradient(
+        to right,
+        #0df 12.5%,
+        #840 12.5% 37.5%,
+        #f80 37.5% 50%,
+        #f00 50% 62.5%,
+        #0f0 62.5% 75%,
+        #f80 75% 87.5%,
+        #80f 87.5% 100%);
+    margin: 5px;
 }
 
 #answer-button{
@@ -113,18 +170,6 @@ h1::after{
     color: #999
 }
 
-#polygon-green{
-    visibility: hidden;
-    opacity: 0;
-    transition: all 1s;
-}
-
-#checkmark{
-    visibility: hidden;
-    opacity: 0;
-    scale: 0.7;
-    transition: opacity 1s, scale 1s cubic-bezier(0.3, 1.0, 0.3, 1.2);
-}
 
 @keyframes BGgradient{
     0% {
